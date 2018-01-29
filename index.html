@@ -3,9 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 30px;
+        }
+
+        /* Style the buttons that are used to open and close the accordion panel */
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 200px;
+            text-align: center;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+        }
+
+        /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+        .active, .accordion:hover {
+            background-color: #ccc;
+        }
+
+        /* Style the accordion panel. Note: hidden by default */
+        .panel {
+            padding: 0 18px;
+            background-color: #3f51b5;
+            overflow: hidden;
+            display: none;
+            justify-content: space-between;
+        }
+        .panel a{
+            color: #000;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
- <a href="/movieMate/build/index.html">MovieMate site</a>
- <a href="https://github.com/v20stepanenko/v20stepanenko.github.io/tree/master/movieMate/src">MovieMate cod</a>
+<div class="wrapper">
+    <div>
+        <button class="accordion">MovieMate</button>
+        <div class="panel">
+            <a href="./movieMate/build/index.html">site</a>
+            <a href="https://github.com/v20stepanenko/v20stepanenko.github.io/tree/master/movieMate/src">source</a>
+        </div>
+    </div>
+</div>
+<script !src="">
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for ( i = 0 ; i < acc.length ; i++ ) {
+        acc[i].addEventListener("click", function () {
+            /* Toggle between adding and removing the "active" class,
+             to highlight the button that controls the panel */
+            this.classList.toggle("active");
+
+            /* Toggle between hiding and showing the active panel */
+            var panel = this.nextElementSibling;
+            if ( panel.style.display === "flex" ) {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "flex";
+            }
+        });
+    }
+</script>
 </body>
 </html>
