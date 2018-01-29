@@ -1,0 +1,47 @@
+@import '../../theme/palette';
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid $paletteColor2;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 16px 0;
+  .logo{
+    display: inline-block;
+    text-transform: capitalize;
+  }
+  a{
+    color: $paletteColor3;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  nav{
+    display: inline-block;
+    a{
+      padding: 0 16px;
+      font-size: 20px;
+      height: 100%;
+      position: relative;
+      &:after{
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: -27px;
+        width: 0;
+        border-bottom: 4px solid $paletteColor4;
+        transition: width .3s linear;
+      }
+      &:hover{
+        color: $paletteColor2;
+        &:after{
+          width: 100%;
+        }
+      }
+
+    }
+  }
+}

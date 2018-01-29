@@ -1,0 +1,61 @@
+@import "../../../theme/palette";
+
+.listItem {
+  width: 25%;
+  margin: 20px 0;
+  .movieCard {
+    position: relative;
+    margin: 15px;
+    padding: 5px;
+    height: 100%;
+    background-color: $paletteColor3;
+    color: $paletteColor1;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  img {
+    object-fit: cover;
+    height: 280px;
+    min-height: 280px;
+    width: 100%;
+    min-width: 100%;
+    line-height: 280px;
+    text-align: center;
+  }
+  .raiting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $paletteColor2;
+    border: 1px solid $paletteColor6;
+    width: 50px;
+    height: 35px;
+    font-weight: 700;
+    line-height: 35px;
+    text-align: center;
+    border-bottom-right-radius: 35%;
+  }
+  .releaseDate{
+    position: absolute;
+    bottom: 10px;
+  }
+  .addToWatchList{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    line-height: 35px;
+    border-radius: 4px;
+    outline: 0;
+    border: 0;
+    background: $paletteColor2  ;
+    box-shadow: 0 2px 2px 0 rgba(33,33,33,.5);
+    transition: background-color .1s linear;
+    &:hover{
+      background-color: $paletteColor4;
+      color: $paletteColor3;
+    }
+  }
+}

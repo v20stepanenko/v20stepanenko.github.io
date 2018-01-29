@@ -1,0 +1,44 @@
+@import '../../../theme/palette';
+
+.miniCard{
+  background-color: $paletteColor1;
+  display: flex;
+  flex-direction: row;
+  color: $paletteColor3;
+  width: 95%;
+  margin: 10px auto;
+  padding: 5px;
+  position: relative;
+  .miniCardInfo *{
+    margin: 8px auto 0;
+  }
+  .deleteBtn{
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    background-color: $paletteColor2;
+    color: $paletteColor1;
+    font-weight: 700;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    line-height: 35px;
+    border-radius: 4px;
+    text-transform: capitalize;
+    transition: background-color .1s linear;
+    &:hover{
+      background-color: $paletteColor4;
+      color: $paletteColor3;
+    }
+  }
+  img{
+    height: 100px;
+    width: 40%;
+    margin-right: 15px;
+    object-fit: cover;
+    cursor: pointer;
+  }
+}

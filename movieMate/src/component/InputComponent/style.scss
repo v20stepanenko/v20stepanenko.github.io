@@ -1,0 +1,16 @@
+@import '../../theme/palette';
+
+.wrapperInput {
+  padding: 8px;
+  margin-bottom: 20px;
+  background: $paletteColor2;
+  display: flex;
+  .inputSearch {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+}

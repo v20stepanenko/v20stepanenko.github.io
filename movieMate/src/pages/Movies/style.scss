@@ -1,0 +1,54 @@
+@import '../../theme/palette';
+
+.watchList::-webkit-scrollbar {
+  background: #fff;
+}
+.watchList::-webkit-scrollbar-thumb{
+  background: $paletteColor4;
+}
+
+.movie {
+  display: flex;
+  justify-content: space-between;
+  .sidebar {
+    flex: 0 0 20%;
+    margin-top: 40px;
+    color: $paletteColor1;
+    .watchList{
+      background: $paletteColor2;
+      min-height: 350px;
+      max-height: 72vh;
+      overflow-y: auto;
+      margin-top: 20px;
+      padding: 7px;
+      & h2{
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+    }
+    .listTitle{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &:before, &:after{
+        display: block;
+        content: "";
+        width: 15%;
+        height: 2px;
+        background-color: $paletteColor1;
+      }
+      &:before{
+        margin-right: 20px;
+      }
+      &:after{
+        margin-left: 20px;
+      }
+    }
+  }
+  .movieList {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 78%;
+  }
+}

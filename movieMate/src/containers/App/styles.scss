@@ -1,0 +1,11 @@
+@import '../../theme/palette';
+
+.app {
+    margin: auto;
+    max-width: 95%;
+    min-width: 1280px;
+    color: $paletteColor3;
+}
+a{
+    color: $paletteColor3;
+}
